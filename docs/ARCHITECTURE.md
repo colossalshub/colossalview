@@ -110,6 +110,7 @@ src/domain/fifo.ts
 src/domain/positions.ts
 src/domain/concentration.ts
 src/domain/preview.ts
+src/domain/sizing.ts             # long-only position size; no persistence
 src/persistence/db.ts
 src/persistence/schema.ts            # Zod + DBSchema
 src/persistence/repositories.ts
@@ -176,7 +177,7 @@ Required variables: `--bg`, `--bg-elevated`, `--fg`, `--fg-muted`, `--border`, `
 - Accent is one orange, used for primary buttons and focus, not for large background fills
 - Light and dark share one stylesheet
 
-Shell is a top navigation to every route in the plan, plus a skip link. Below 720px the nav wraps and wide tables scroll horizontally inside their region. Native form controls, styled with tokens. No component library.
+Shell is a compact sidebar from 720px up and a wrapping top navigation below that, plus a skip link. Wide tables become labeled rows below 720px. Native form controls, styled with tokens. No component library. Watch items include a `priority` boolean (default false) so a symbol can be marked for closer attention. Calculator defaults (risk percent and whole versus fractional shares) live in `localStorage` under `colossalview.calculator`, outside the portfolio schema.
 
 ### Service flow for a sell
 
